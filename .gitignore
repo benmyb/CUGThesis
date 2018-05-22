@@ -1,0 +1,16 @@
+.DS_Store
+*~
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+fonts
+TODO.txt
+timozer*
+*.bbl
+*.blg
+_minted-cache
+imgs
+images
