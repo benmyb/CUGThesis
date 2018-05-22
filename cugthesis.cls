@@ -546,17 +546,6 @@
 \setcounter{page}{1}
 }
 
-%----------致谢---------------------
-\newcommand{\acknowledgment}
-{
-	\clearpage %加这个命令后，目录中的页码才显示正确
-	\phantomsection %加这个命令后，目录中的超链接才指向正确的页码
-	\titleformat{\chapter}{\centering\sffamily\bfseries\sanhao\hei}{第\,\thechapter\,章}{quad}{}
-	\chapter*{致\hspace{4ex}谢} %开始一段不带编号的章
-	\addcontentsline{toc}{chapter}{致\quad{}谢} %使目录中以章级别显示“致谢”
-	\addcontentsline{toe}{chapter}{Acknowledgement}
-}
-
 % 参考文献
 \RequirePackage[sort&compress]{natbib}
 \bibliographystyle{gbt7714-2005}
