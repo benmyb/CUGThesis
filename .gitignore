@@ -7,10 +7,5 @@
 *.out
 *.toc
 fonts
-TODO.txt
-timozer*
 *.bbl
 *.blg
-_minted-cache
-imgs
-images
