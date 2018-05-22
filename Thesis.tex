@@ -5,26 +5,29 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[twoside]{CUGThesis}
 
-\title{群体智能游戏EvoTank设计与实现} %论文题目
-\author{马烨斌} %作者姓名
+\title{论文题目} %论文题目
+\author{XXX} %作者姓名
 \date{\today} %日期，默认当日
 \school{计算机学院} %院系名称
 \classnum{计算机科学与技术} %专业班级
-\stunum {20141000281} %学号
-\instructor{杨鸣} %指导教师姓名
+\stunum {学号} %学号
+\instructor{XXX} %指导教师姓名
 \instructorlevel{副教授}
 
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
 
 \begin{document}
 \maketitle
 \makestatement
 
-\begin{cnabstract}{动态最短路问题；蚁群算法；多种群策略；聚类算法}
-	随着信息科技的发展，人工智能展现了越来越多的价值，让人们日益重视这门新兴科学。而群体智能作为自然界中广泛存在的一种简单智能，由于其规则简单、扩充性好、鲁棒性强等特点，十分适合计算机的编程思想，涌现出一大批优秀的群体智能算法。但是，受困于其特点，这些算法在混合使用时的配合比较难调整，致使开发者的思路主要集中在吸取其他算法优点再优化自身上，使算法独自的优势得不到充分发挥。因此，本次研究的主要方向是创建一个新型算法架构，让各种群体智能算法之间通过简单修改，适应算法之间的合作，让算法的优势得到充分发挥。本项目通过游戏的方式呈现这个架构，使算法之间的合作不再通过简单的数字表现，能更加直观地观察到算法间联动的效果，同时也增加了研究的趣味性。
+\begin{cnabstract}{关键词1；关键词2；关键词3；关键词4；关键词5}
+	中文摘要
 \end{cnabstract}
 
-\begin{enabstract}{swarm intelligence；ant colony optimization；clustering；formation}
-   	With the development of the information technology, artificial intelligence is showing more and more value and people are paying more and more attention to this emerging science. Not only in the computer area, artificial intelligence is playing an important part in the other field like finance, advertisement and so on. Swarm intelligence(SI), as a kind of simple intelligence, is widely existed in nature has received intensive study in computer science. Compare to the other artificial intelligence, it has advantages as below: can be effective with simple rules, the distributed feature leads to strong robustness, the swarm like structure brings good expansibility. So, SI is very suitable for computer programming, and here comes plenty of excellent algorithms. However, when these algorithms work together, it will be hard to coordinate with each other. And because of that, the usual way to improve algorithms is absorb advantages from the other, this cause these good points cannot be fully played. Therefore, the main direction of this study is to create a new algorithm structure, makes algorithms can be worked together fully effective with some minor modifications. This structure makes algorithms work not only separately, but also cooperatively. In order to observe the situation of algorithms which working together, this study will be presented like a game developed by Unreal 4 game engine. Adding a fancy algorithm visualization can not only provide the zest and a touch of the unexpected to any piece of research, but also reflect the cooperation within algorithms. Specially, some kind of swarm intelligence like biomimetic intelligence is good to be adjust better in visualization than simple data.
+\begin{enabstract}{keyword 1; keyword 2; keyword 3; keyword 4; keyword 5}
+   	English abstract
 \end{enabstract}
 
 \makeToc
@@ -32,6 +35,7 @@
 %---------------------------------------------开始正文---------------------------------------------
 
 %--------------------------------------------- 第一章 ---------------------------------------------
+%第一层标题双倍行距
 \begin{spacing}{2}
 	\section{绪论}
 \end{spacing}
@@ -86,12 +90,6 @@
 引言
 	\subsection{单一坦克功能测试}
 	单一坦克功能测试
-	\begin{figure}[!t]
-		\centering
-		\includegraphics[scale=0.35]{Figures/1}
-		\caption{多种群策略效果图}
-		\label{Fig:multiPop}
-	\end{figure}
 	\subsection{单一算法功能测试}
 	单一算法功能测试
 		\subsubsection{算法1}
@@ -115,14 +113,15 @@
 
 %---------------------------------------------  致谢  ---------------------------------------------
 \begin{spacing}{2}
-	\section{致谢}
+	\section*{致谢}
 \end{spacing}
+\phantomsection
+\addcontentsline{toc}{section}{致谢}
 致谢
 
 %---------------------------------------------参考文献---------------------------------------------
-\begin{spacing}{2}
-	\section{参考文献}
-\end{spacing}
+
 \bibliography{Bibs/mybib}
+\phantomsection
 
 \end{document}

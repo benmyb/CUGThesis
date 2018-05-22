@@ -127,7 +127,7 @@
 	\fancyhead[OC]{\wuhao\song 中国地质大学学士学位论文 }
 	\fancyhead[OR]{\wuhao\song \thepage}
 
-	\fancyhead[EC]{\wuhao\song 马烨斌：群体智能游戏EvoTank设计与实现 }
+	\fancyhead[EC]{\wuhao\song \@author：\@title }
 	\fancyhead[EL]{\wuhao\song \thepage}
 
 }
@@ -261,8 +261,8 @@
 %设置标题的样式
 \RequirePackage{caption}
 \captionsetup{labelsep=quad,font={normalsize,bf,singlespacing}}
-\captionsetup[figure]{position=bottom,skip={0pt}}
-\captionsetup[table]{position=top,skip={0pt}}
+\captionsetup[figure]{position=bottom,skip={0pt},font={footnotesize}}
+\captionsetup[table]{position=top,skip={0pt},font={footnotesize}}
 \setlength{\textfloatsep}{0pt}
 \setlength{\floatsep}{0pt}
 \setlength{\intextsep}{6pt}
@@ -300,8 +300,8 @@
 	\def \figlabel {#3}
 	\begin{figure}[#1]
 		\centering
-	}{
 		\wuhao
+	}{
 		\caption{\figcaption} \label{\figlabel}
 	\end{figure}
 }
@@ -546,10 +546,16 @@
 \setcounter{page}{1}
 }
 
-
-
-
-
+%----------致谢---------------------
+\newcommand{\acknowledgment}
+{
+	\clearpage %加这个命令后，目录中的页码才显示正确
+	\phantomsection %加这个命令后，目录中的超链接才指向正确的页码
+	\titleformat{\chapter}{\centering\sffamily\bfseries\sanhao\hei}{第\,\thechapter\,章}{quad}{}
+	\chapter*{致\hspace{4ex}谢} %开始一段不带编号的章
+	\addcontentsline{toc}{chapter}{致\quad{}谢} %使目录中以章级别显示“致谢”
+	\addcontentsline{toe}{chapter}{Acknowledgement}
+}
 
 % 参考文献
 \RequirePackage[sort&compress]{natbib}
