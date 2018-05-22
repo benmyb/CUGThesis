@@ -10,7 +10,7 @@
 \date{\today} %日期，默认当日
 \school{计算机学院} %院系名称
 \classnum{计算机科学与技术} %专业班级
-\stunum {学号} %学号
+\stunum {XXXXXXXXXXX} %学号
 \instructor{XXX} %指导教师姓名
 \instructorlevel{副教授}
 
@@ -22,11 +22,11 @@
 \maketitle
 \makestatement
 
-\begin{cnabstract}{关键词1；关键词2；关键词3；关键词4；关键词5}
-	中文摘要
+\begin{cnabstract}{关键词；关键词；关键词；关键词；关键词}
+	摘要
 \end{cnabstract}
 
-\begin{enabstract}{keyword 1; keyword 2; keyword 3; keyword 4; keyword 5}
+\begin{enabstract}{keyword; keyword; keyword; keyword; keyword}
    	English abstract
 \end{enabstract}
 
@@ -35,7 +35,6 @@
 %---------------------------------------------开始正文---------------------------------------------
 
 %--------------------------------------------- 第一章 ---------------------------------------------
-%第一层标题双倍行距
 \begin{spacing}{2}
 	\section{绪论}
 \end{spacing}
@@ -80,6 +79,8 @@
 		组件1
 		\subsubsection{组件2}
 		组件2
+		\subsubsection{etc}
+		etc……
 	\subsection{接口设计}
 	接口设计
 
@@ -88,14 +89,14 @@
 	\section{项目测试}
 \end{spacing}
 引言
-	\subsection{单一坦克功能测试}
-	单一坦克功能测试
-	\subsection{单一算法功能测试}
-	单一算法功能测试
-		\subsubsection{算法1}
-		算法1
-		\subsubsection{算法2}
-		算法2
+	\subsection{测试A}
+	测试A测试A测试A
+	\subsection{测试B}
+	测试B测试B测试B
+		\subsubsection{测试B1}
+		测试B1
+		\subsubsection{测试B2}
+		测试B2
 	\subsection{项目总体测试}
 	项目总体测试
 
@@ -117,11 +118,13 @@
 \end{spacing}
 \phantomsection
 \addcontentsline{toc}{section}{致谢}
+
 致谢
 
 %---------------------------------------------参考文献---------------------------------------------
 
 \bibliography{Bibs/mybib}
 \phantomsection
+\addcontentsline{toc}{section}{参考文献}
 
 \end{document}
