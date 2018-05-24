@@ -2,129 +2,223 @@
 % vim: set fenc=utf-8
 
 % -*- coding: UTF-8; -*-
-%!TEX encoding = UTF-8 Unicode
+%!TEX encoding = UTF-8
 \documentclass[twoside]{CUGThesis}
 
 \title{论文题目} %论文题目
-\author{XXX} %作者姓名
+\author{作者姓名} %作者姓名
 \date{\today} %日期，默认当日
-\school{计算机学院} %院系名称
-\classnum{计算机科学与技术} %专业班级
-\stunum {XXXXXXXXXXX} %学号
-\instructor{XXX} %指导教师姓名
-\instructorlevel{副教授}
+\school{院系名称} %院系名称
+\classnum{专业} %专业
+\stunum {学号} %学号
+\instructorone{某某某} %指导教师1姓名
+\instructoronelevel{副教授}
+\instructortwo{某某} %指导教师2姓名
+\instructortwolevel{副教授}
 
 \usepackage{makecell}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{hyperref}
 
 \begin{document}
-\maketitle
-\makestatement
-
-\begin{cnabstract}{关键词；关键词；关键词；关键词；关键词}
-	摘要
-\end{cnabstract}
-
-\begin{enabstract}{keyword; keyword; keyword; keyword; keyword}
-   	English abstract
-\end{enabstract}
-
-\makeToc
+	\maketitle
+	\makestatement
+	
+	\begin{cnabstract}{关键词；关键词；关键词；关键词}
+		摘要
+	\end{cnabstract}
+	
+	\begin{enabstract}{keyword; keyword; keyword; keyword}
+		abstract
+	\end{enabstract}
+	
+	\makeToc
 	
 %---------------------------------------------开始正文---------------------------------------------
-
+	
 %--------------------------------------------- 第一章 ---------------------------------------------
-\begin{spacing}{2}
-	\section{绪论}
-\end{spacing}
-引言
-	\subsection{选题背景}
-	选题背景
-	\subsection{研究目的}
-	研究目的
-	\subsection{研究范围}
-	研究范围
-	\subsection{主要研究内容}
-	主要研究内容
-	\subsection{实现技术}
-	实现技术
-	\subsection{论文构成}
-	论文构成
+	\begin{spacing}{2}
+		\section{第一章}
+	\end{spacing}
+	引言
+	\subsection{第一章第一小节}
+	第一小节，引用实例\cite{引用}，按照格式填写mybib.bib
+	\subsection{第一章第二小节}
+	第二小节
+	\subsection{etc}
+	etc
+	
+	
+%------------------------------------------- 第二章 ---------------------------------------------
+	\begin{spacing}{2}
+		\section{第二章}
+	\end{spacing}
+	第二章引言
+	\subsection{第二章第一小节}
+	第二章第一小节
+	\subsubsection{第二章第一小节第三级标题}
+	插图实例（图\ref{Fig:example}）
+	\begin{figure}[!t]
+		\centering
+		\includegraphics[scale=0.5]{Figures/example.jpg}
+		\caption{示例图}
+		\label{Fig:example}
+	\end{figure}
+	\subsection{第二章第二小节}
+\begin{table}[t]
+	\centering
+	\caption{在最短路问题中PL和ACO算法的比较}
+	\label{Tab:ACOcomparison}
+	\scalebox{0.50}{
+		\begin{tabular}{ccccccc|cccccccl}
+			\toprule
+			Problem&Algorithm&Best&Worse&Mean&STD&T&Problem&Algorithm&Best&Worse&Mean&STD &T \\
+			\midrule
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\multirow{4}{*}{P00}
+			&   ACS     & 0.0930698 &   0.0411407   &         0.0627877	    & 0.0141405 &   Y   &
+			\multirow{4}{*}{P07}
+			&   ACS     & 0.0410582	&   0.0206589	&         0.028241      & 0.00638986&   Y   \\
+			&   AS      &   0.462061&	0.35337     &         0.403071      & 0.0277734 &   Y   &
+			&   AS      &   0.30033 &   0.145861    &         0.21029       & 0.0539611 &   Y   \\
+			&   MMAS    &  0.0171983&	0.00334824  &         0.0112274     & 0.00470286&   Y   &
+			&   MMAS    &  0.0242281&    0.00159911 & \textbf{0.0112072}    & 0.00687601&   Y   \\
+			&   PL      &  0.0133659&	0.00166664  & \textbf{0.00635868}   & 0.0035441 &   N   &
+			&   PL      &   0.044202&	0.0157922	&         0.0303495     & 0.00698537&   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P01}
+			&   ACS     &   0.16457 &   0.0999876   &         0.12662       & 0.0177492 &   Y   &
+			\multirow{4}{*}{P08}
+			&   ACS     &  0.0739968&	0.0239232	&         0.0452696     & 0.0159749 &   Y   \\
+			&   AS      &   0.661795&   0.554316    &         0.604663      & 0.0324502 &   Y   &
+			&   AS      &   0.320939&   0.215427    &         0.275287      & 0.0319547 &   Y   \\
+			&   MMAS    &  0.0175093&	1.61992e-07 &         0.00501607    & 0.00562431&   Y   &
+			&   MMAS    &  0.0207359&   0.00289674  &         0.00898086    & 0.00618029&   Y   \\
+			&   PL      & 0.00395594&   1.61992e-07 &\textbf{0.000523546}   & 0.00120591&   N   &
+			&   PL      & 0.00515465&   0.000477628 &\textbf{0.00193489}    & 0.00142671&   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P02}
+			&   ACS     & 0.110506  &    0.0763131  &         0.0959222     & 0.0104047 &   Y   &
+			\multirow{4}{*}{P09}
+			&   ACS     & 0.0713172 &    0.0213985  &         0.0395788     & 0.0143782 &   Y   \\
+			&   AS      & 0.426796  &    0.363803   &         0.382138      & 0.0174834 &   Y   &
+			&   AS      & 0.319714  &    0.235834   &         0.282317      & 0.0307969 &   Y   \\
+			&   MMAS    & 0.0330505 &    0.00800912 &         0.0195406     & 0.0075057 &   Y   &
+			&   MMAS    & 0.0040295 &	 0.000809258&         0.00202011    & 0.00101521&   Y   \\
+			&   PL      & 0.00795137&    0          & \textbf{0.0015898}    & 0.00318078&   N   &
+			&   PL      &0.000416374&    6.45725e-07& \textbf{4.31788e-05}  &0.000124431&   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P03}
+			&   ACS     & 0.0626713 &    0.0243962  &         0.0459773     & 0.0119648 &   Y   &
+			\multirow{4}{*}{P10}
+			&   ACS     & 0.0731515 &    0.0278284  & \textbf{0.0491545}    & 0.0143662 &   Y   \\
+			&   AS      & 0.337419  &    0.170842   &         0.243085      & 0.0492346 &   Y   &
+			&   AS      & 0.344545  &    0.272946   &         0.297685      & 0.0194608 &   Y   \\
+			&   MMAS    & 0.011992  &    0.0016992  &         0.00609598    & 0.00298427&   Y   &
+			&   MMAS    & 0.0777209 &	 0.0408171  &         0.0550061     & 0.0119274 &   Y   \\
+			&   PL      & 0.00213017&    5.40022e-05& \textbf{0.00109176}   &0.000684113&   N   &
+			&   PL      & 0.0681923 &    0.0398739  &         0.0591316     & 0.00964724&   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P04}
+			&   ACS     & 0.0565645 &    0.0177696  &         0.0340459     & 0.00985762&   Y   &
+			\multirow{4}{*}{P11}
+			&   ACS     & 0.0434278 &    0.0167988  & \textbf{0.0288648}    & 0.0089639 &   Y   \\
+			&   AS      & 0.265976  &    0.173483   &         0.226295      & 0.0252135 &   Y   &
+			&   AS      & 0.442657  &    0.219314   &         0.281813      & 0.0641249 &   Y   \\
+			&   MMAS    & 0.00827679&    0.0054508  &         0.0072681     &0.000813827&   Y   &
+			&   MMAS    & 0.0718606 &    0.0596989  &         0.0649468     & 0.0039248 &   Y   \\
+			&   PL      & 0.00793271&    0.00324745 & \textbf{0.00537118}   & 0.00150844&   N   &
+			&   PL      & 0.0688384 &    0.0564867  &         0.0598239     & 0.00387913&   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P05}
+			&   ACS     & 0.138211  &    0.0895506  &         0.118966      & 0.0161335 &   Y   &
+			\multirow{4}{*}{P12}
+			&   ACS     & 0.0259041 &    0.00904431 &         0.015946      & 0.00542036&   N   \\
+			&   AS      & 0.53523   &    0.225588   &         0.338333      & 0.0824437 &   Y   &
+			&   AS      & 0.430772  &    0.0926553  &         0.276433      & 0.114525  &   Y   \\
+			&   MMAS    & 0.0930844 &    0.0855759  &         0.0869382     & 0.00210265&   Y   &
+			&   MMAS    & 0.0121102 &    0.00146996 & \textbf{0.00495102}   & 0.00295387&   Y   \\
+			&   PL      & 0.0855759 &    0.0855759  & \textbf{0.0855759}    & 0         &   N   &
+			&   PL      & 0.0300675 &    0.00388919 &         0.0123928     & 0.00734325&   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P06}
+			&   ACS     & 0.130977  &    0.0354694  &         0.0920517     & 0.0299742 &   Y   &
+			\multirow{4}{*}{P13}
+			&   ACS     & 0.109893  &    0.0760795  &         0.0955222     & 0.0119847 &   Y   \\
+			&   AS      & 0.433576  &    0.307439   &         0.363463      & 0.0327332 &   Y   &
+			&   AS      & 0.40576   &    0.363493   &         0.386317      & 0.0165002 &   Y   \\
+			&   MMAS    & 0.0295885 &    0.0114335  &         0.0221899     & 0.00583455&   Y   &
+			&   MMAS    & 0.0253595 &    0.00845282 &         0.0152155     & 0.0063259 &   Y   \\
+			&   PL      & 0.00482247&    0          & \textbf{0.00254309}   & 0.00140333&   N   &
+			&   PL      & 0         &    0          & \textbf{0}            & 0         &   N   \\
+			
+			% Algorithm &   Max     &      Min      &           Mean        &    Std    &   T
+			\hline
+			\multirow{4}{*}{P14}
+			&   ACS     & 0.0224251 &    0          &         0.00707997    & 0.00751309&   Y   &
+			\multirow{4}{*}
+			& & & & & & \\
+			&   AS      & 0.262214  &    0.0539204  &         0.137192      & 0.0699909 &   Y   &
+			& & & & & & \\
+			&   MMAS    & 0.00572017&    0          & \textbf{0.000571346}  & 0.00171627&   Y   &
+			& & & & & & \\
+			&   PL      & 0.0881788 &    0.0176653  &         0.0441301     & 0.020959  &   N   &
+			& & & & & & \\
+			
+			\hline \hline
+		\end{tabular}
+	}
+	\vspace{10mm}
+\end{table}
 
-%--------------------------------------------- 第二章 ---------------------------------------------
-\begin{spacing}{2}
-	\section{系统需求分析与总体设计}
-\end{spacing}
-引言
-	\subsection{需求分析}
-	需求分析
-		\subsubsection{项目功能需求}
-		项目功能需求
-		\subsubsection{组件需求分析}
-		组件需求分析
-	\subsection{项目总体设计}
-	项目总体设计
-
+	
 %--------------------------------------------- 第三章 ---------------------------------------------
-\begin{spacing}{2}
-	\section{详细设计}
-\end{spacing}
-引言
-	\subsection{功能模块设计}
-	功能模块设计
-	图
-	\subsection{功能组件设计}
-		\subsubsection{组件1}
-		组件1
-		\subsubsection{组件2}
-		组件2
-		\subsubsection{etc}
-		etc……
-	\subsection{接口设计}
-	接口设计
-
-%--------------------------------------------- 第四章 ---------------------------------------------
-\begin{spacing}{2}
-	\section{项目测试}
-\end{spacing}
-引言
-	\subsection{测试A}
-	测试A测试A测试A
-	\subsection{测试B}
-	测试B测试B测试B
-		\subsubsection{测试B1}
-		测试B1
-		\subsubsection{测试B2}
-		测试B2
-	\subsection{项目总体测试}
-	项目总体测试
-
-%--------------------------------------------- 第五章 ---------------------------------------------
-\begin{spacing}{2}
-	\section{总结与展望}
-\end{spacing}
-引言
-	\subsection{开发关键难题}
-	开发关键难题
-	\subsection{项目未来展望}
-	项目未来展望
-	\subsection{项目总结}
-	项目总结
-
+	\begin{spacing}{2}
+		\section{第三章}
+	\end{spacing}
+	引言
+	\subsection{第三章第一小节}
+	开始列表
+	\begin{enumerate}
+		\item 条目1
+		
+		说明文字1
+		
+		\item 条目2
+		
+		说明文字2
+		
+		
+	\end{enumerate}
+	
+	
 %---------------------------------------------  致谢  ---------------------------------------------
-\begin{spacing}{2}
-	\section*{致谢}
-\end{spacing}
-\phantomsection
-\addcontentsline{toc}{section}{致谢}
-
-致谢
-
+	\begin{spacing}{2}
+		\section*{致谢}
+	\end{spacing}
+	\phantomsection
+	\addcontentsline{toc}{section}{致谢}
+	
+	致谢
+	
+	\clearpage
 %---------------------------------------------参考文献---------------------------------------------
-
-\bibliography{Bibs/mybib}
-\phantomsection
-\addcontentsline{toc}{section}{参考文献}
-
+	
+	\bibliography{Bibs/mybib}
+	\phantomsection
+	\addcontentsline{toc}{section}{参考文献}
+	
 \end{document}
